@@ -9,10 +9,12 @@ Route::get('/', function () {
 
 
 
-use App\Http\Controllers\StudentsController;
-Route::get('/viewList', [StudentsController::class, 'index']);
+
 
 Route::get('/viewList', function(){
-    $students = Student::all();
-    return view('viewList.data', compact('students'));
+    $students = [
+        ["name" => "John Doe", "email" => "navs@", "id" => "0"],
+        ["name" => "John Does", "email" => "navas@", "id" => "1"],
+        ];
+    return view('viewList.showList', compact('students'));
 });

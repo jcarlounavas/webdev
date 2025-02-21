@@ -10,12 +10,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 </head>
 <body>
-    @if(isset($students))
-    <p>Students variable is set.</p>
-@else
-    <p>Students variable is not set.</p>
-@endif
-
 
     <table class="table">
         <thead>
@@ -26,11 +20,11 @@
           </tr>
         </thead>
         <tbody>
-            @foreach ($students as $id => $student)
+            @foreach ($students as $student)
                 <tr>
-                    <th scope="row">{{ $id + 1 }}</th>
-                    <td>{{ $student->name }}</td> 
-                    <td>{{ $student->email }}</td>
+                    <th scope="row">{{ $student['id'] }}</th>
+                    <td>{{ $student['name'] }}</td> 
+                    <td>{{ $student['email']}}</td>
                 </tr>
             
             @endforeach
