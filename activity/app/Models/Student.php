@@ -6,5 +6,5 @@ class Student extends Model
 {
     use Notifiable;
 
-    protected $fillable = ['name', 'email'];
+    protected $fillable = ['name', 'email', 'age'];
 }

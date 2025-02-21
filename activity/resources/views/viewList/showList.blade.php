@@ -17,6 +17,7 @@
             <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Email</th>
+            <th scope="col">Age</th>
           </tr>
         </thead>
         <tbody>
@@ -25,6 +26,7 @@
                     <th scope="row">{{ $student['id'] }}</th>
                     <td>{{ $student['name'] }}</td> 
                     <td>{{ $student['email']}}</td>
+                    <td>{{ $student['age']}}</td>
                 </tr>
             
             @endforeach

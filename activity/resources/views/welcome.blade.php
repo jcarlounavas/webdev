@@ -12,5 +12,6 @@
 <body>
     <h1>Student Document</h1>
     <a href="/viewList" class="btn btn-primary">View here</a>
+    <a href="/create" class="btn btn-primary">Create here</a>
 </body>
 </html>
