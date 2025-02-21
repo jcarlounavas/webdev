@@ -10,9 +10,12 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <table class="table">
-        <thead>
+  <div class="container-fluid text-center">
+    <div class="container" style="padding: 5px; color: darkcyan;" >
+      <h1>Student List</h1>
+    </div>
+    <table class="table table-hover">
+        <thead class="table-dark">
           <tr>
             <th scope="col">#</th>
             <th scope="col">Name</th>
@@ -34,5 +37,8 @@
 
         </tbody>
       </table>
+      <br>
+      <a href="/" class="btn btn-primary">Home</a>
+  </div>
 </body>
 </html>
