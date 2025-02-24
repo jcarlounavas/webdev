@@ -34,12 +34,24 @@ Route::post('/create', action: function(){
         'email' => request(key: 'email'),
         'age' => request(key: 'age')
     ]);
+    
  /*   $student = new Student();
     $student->name = request(key: 'name');
     $student->email = request(key: 'email');
     $student->age = request(key: 'age');
     $student->save();
 */
-    return redirect('/viewList');
+    
+    return redirect('viewList');
 
+});
+
+Route::get('/edit/{id}', function($id){
+    $student = Student::find($id);
+    return view('editStudent', compact('student'));
+});
+Route::get('/delete/{id}', function($id){
+    $student = Student::find($id);
+    $student->delete();
+    return redirect('/viewList');
 });

@@ -19,15 +19,15 @@
                 @csrf
                 <div class="mt-3">
                     <label for="name">Name:</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
                 </div>
                 <div class="mt-3">
                     <label for="email">Email:</label>
-                    <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="mt-3">
                     <label for="age">Age:</label>
-                    <input type="text" class="form-control" id="age" name="age" placeholder="Age">
+                    <input type="text" class="form-control" id="age" name="age" placeholder="Age" required>
                 </div>
             
                 <div class="mt-3" style="text-align: center;">
@@ -36,5 +36,10 @@
         </div>
         
         </div>
+        {{-- <script>
+            function forButton(){
+                alert("Student Added Successfully");
+            }
+        </script> --}}
 </body>
 </html>

@@ -21,6 +21,7 @@
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Age</th>
+            <th scope="col">Update</th>
           </tr>
         </thead>
         <tbody>
@@ -30,6 +31,9 @@
                     <td>{{ $student['name'] }}</td> 
                     <td>{{ $student['email']}}</td>
                     <td>{{ $student['age']}}</td>
+                    <td>
+                      <a href="/edit/{{ $student['id'] }}" class="btn btn-primary">Edit</a>
+                      <a href="/delete/{{ $student['id'] }}" class="btn btn-danger">Delete</a>
                 </tr>
             
             @endforeach
