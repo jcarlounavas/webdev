@@ -13,14 +13,7 @@ Route::get('/', function () {
 
 Route::get('/viewList', function(){
     $students = Student::all();
-/*        foreach($students as $student){
-            Student::create([
-            'id' => $student['id'],
-            'name' => $student['name'],
-            'email' => $student['email'],
-            'age' => $student['age']
-        ]);
-        } */
+
     return view('viewList.showList', compact('students'));
 });
 Route::get('/create', function(){
@@ -42,13 +35,23 @@ Route::post('/create', action: function(){
     $student->save();
 */
     
-    return redirect('viewList');
+    return redirect('/viewList');
 
 });
 
 Route::get('/edit/{id}', function($id){
     $student = Student::find($id);
     return view('editStudent', compact('student'));
+});
+
+Route::post('/edit/{id}', function($id){
+    $student = Student::find($id);
+    $student->update([
+        'name' => request('name'),
+        'email' => request('email'),
+        'age' => request('age')
+    ]);
+    return redirect('/viewList');
 });
 Route::get('/delete/{id}', function($id){
     $student = Student::find($id);

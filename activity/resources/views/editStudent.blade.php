@@ -9,6 +9,23 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 </head>
 <body>
-<h1>Hello-Bootstrap</h1>
+    <form action="/edit/{{$student->id}}" method="POST">
+        @csrf
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="text" class="form-control" id="age" placeholder="Enter age" name="age">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </body>
 </html>
